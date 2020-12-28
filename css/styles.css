@@ -455,7 +455,7 @@ header {
   align-items: center;
 }
 
-.form-checkbox__icon {
+.checkbox__icon {
   margin-right: 8px;
 
   fill: var(--main-white);
@@ -472,7 +472,7 @@ header {
   margin-right: 8px;
 }
 
-.form-checkbox input:checked + .form-checkbox__icon {
+.form-checkbox input:checked + .checkbox__icon {
   border: none;
   background-color: var(--accent-text-color);
 }
