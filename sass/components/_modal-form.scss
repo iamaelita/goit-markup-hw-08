@@ -7,21 +7,21 @@
   background: rgba(0, 0, 0, 0.2);
 
   opacity: 1;
-  transition: opacity 500ms var(--timing-function);
+  transition: opacity 500ms $timing-function;
 
   transition-property: opacity, visibility;
   transition-duration: 400ms;
-  transition-timing-function: var(--timing-function);
-}
+  transition-timing-function: $timing-function;
 
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0);
+  &.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0);
+  }
 }
 
 .modal {
@@ -36,7 +36,7 @@
 
   width: 528px;
   height: 581px;
-  background-color: var(--main-white);
+  background-color: $main-white;
   border-radius: 4px;
 
   box-shadow: 0px 2px 1px 0px (0, 0, 0, 0, 2), 0px 1px 1px 0px (0, 0, 0, 0, 14),
@@ -44,40 +44,36 @@
 
   transition-property: transform;
   transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
+  transition-timing-function: $timing-function;
   transition-delay: 150ms;
-}
 
-.modal__button {
-  position: absolute;
-  padding: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 8px;
-  right: 8px;
-  border-radius: 50%;
-  background: var(--main-white);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
+  &__button {
+    position: absolute;
+    padding: 6px;
+    @extend %flex-center;
+    top: 8px;
+    right: 8px;
+    border-radius: 50%;
+    background: $main-white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 
-.modal__button:hover > .modal__close-icon,
-.modal__button:focus > .modal__close-icon {
-  fill: var(--accent-text-color);
+    &:hover > .modal__close-icon,
+    &:focus > .modal__close-icon {
+      fill: $accent-text-color;
+    }
+  }
 }
 
 .modal-form__title {
   display: block;
   margin-bottom: 12px;
   font-family: Roboto, sans-serif;
+  @include font(20px, 700, 1.15);
   font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--title-text-color);
+  color: $title-text-color;
 }
 
 .form-field {
@@ -86,128 +82,119 @@
   flex-direction: column;
 
   margin-bottom: 10px;
-}
 
-.form-field.textarea {
-  margin-bottom: 20px;
-}
+  &.textarea {
+    margin-bottom: 20px;
+  }
 
-.form-field label {
-  margin-bottom: 4px;
+  & label {
+    margin-bottom: 4px;
 
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    @include font(12px, 400, 1.17);
 
-  letter-spacing: 0.01em;
+    letter-spacing: 0.01em;
 
-  color: var(--primary-text-color);
-}
+    color: $primary-text-color;
+  }
 
-.form-field__input,
-.form-field__text {
-  padding-top: 11px;
-  padding-bottom: 11px;
-  padding-left: 42px;
+  &__text {
+    resize: none;
+  }
 
-  outline: none;
+  &__input,
+  &__text {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 42px;
 
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  color: var(--primary-text-color);
+    outline: none;
 
-  transition: border-color 250ms var(--timing-function);
-}
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    color: $primary-text-color;
 
-.form-field__text {
-  resize: none;
-}
+    transition: border-color 250ms $timing-function;
+  }
 
-.form-field__input:focus,
-.form-field__text:focus {
-  border-color: var(--accent-text-color);
-}
+  &__input:focus,
+  &__text:focus {
+    border-color: $accent-text-color;
+  }
 
-.form-field__input:hover + .form-field__icon,
-.form-field__input:focus + .form-field__icon {
-  fill: var(--accent-text-color);
-}
+  & .form-field__text {
+    min-height: 120px;
 
-.form-field .form-field__text {
-  min-height: 120px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
 
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-right: 16px;
-  padding-left: 16px;
-}
+  & textarea::placeholder {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    @include font(14px, 400, 1.14);
+    letter-spacing: 0.01em;
 
-.form-field textarea::placeholder {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-
-  color: rgba(117, 117, 117, 0.5);
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
 
 .form-field__icon {
   position: absolute;
   bottom: 11px;
   left: 12px;
-  fill: var(--title-text-color);
+  fill: $title-text-color;
 
-  transition: color 250ms var(--timing-function);
+  transition: color 250ms $timing-function;
+
+  .form-field__input:hover + &,
+  .form-field__input:focus + & {
+    fill: $accent-text-color;
+  }
 }
 
 .form-checkbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flex-center;
   margin-bottom: 30px;
-}
 
-.form-checkbox label {
-  display: flex;
-  align-items: center;
+  & label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+  }
+
+  & input {
+    position: absolute;
+    margin-right: 8px;
+  }
 }
 
 .check-icon {
   margin-right: 8px;
 
-  fill: var(--main-white);
+  fill: $main-white;
 
   border-radius: 2px;
-  border: 2px solid var(--title-text-color);
+  border: 2px solid $title-text-color;
 
-  transition: background-color 250ms var(--timing-function),
-    border-color 250ms var(--timing-function);
-}
+  transition: background-color 250ms $timing-function,
+    border-color 250ms $timing-function;
 
-.form-checkbox input {
-  position: absolute;
-  margin-right: 8px;
-}
-
-.form-checkbox input:checked + .check-icon {
-  border: none;
-  background-color: var(--accent-text-color);
-}
-
-.form-checkbox label {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--primary-text-color);
+  .form-checkbox input:checked + & {
+    border: none;
+    background-color: $accent-text-color;
+  }
 }
 
 .agreement-link {
   text-decoration: underline;
-  color: var(--accent-text-color);
+  color: $accent-text-color;
 
   text-decoration-skip-ink: none;
 }
@@ -217,15 +204,13 @@
   min-height: 50px;
   width: 200px;
   margin: 0 auto;
-  color: var(--main-white);
-  background-color: var(--accent-text-color);
+  color: $main-white;
+  background-color: $accent-text-color;
   border: 1px solid transparent;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
+  @include font(16px, 700, 1.88);
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;

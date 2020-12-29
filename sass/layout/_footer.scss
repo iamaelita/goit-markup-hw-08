@@ -1,5 +1,5 @@
 .footer-info {
-  background-color: var(--accent-background);
+  background-color: $accent-background;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -12,16 +12,14 @@
   display: block;
   margin-bottom: 20px;
 
-  color: var(--main-white);
+  color: $main-white;
   font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  @include font(26px, 700, 1.19);
   letter-spacing: 0.03em;
-}
 
-.footer__logo--accent {
-  color: var(--accent-text-color);
+  &--accent {
+    color: $accent-text-color;
+  }
 }
 
 .footer-address-list {
@@ -36,45 +34,39 @@
   display: block;
   margin-bottom: 9px;
 
-  color: var(--main-white);
-  font-family: Roboto;
+  color: $main-white;
+  font-family: Roboto, sans-serif;
+  @include font(14px, 400, 1.71);
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
 .footer-contacts {
   font-family: Roboto, sans-serif;
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  @include font(14px, 400, 1.71);
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-social__title {
-  display: block;
-  margin-bottom: 20px;
-
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
 .footer-social {
-  color: var(--main-white);
+  color: $main-white;
   margin-right: 93px;
-}
 
-.footer-social__list {
-  display: flex;
+  &__list {
+    display: flex;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 20px;
+
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    @include font(14px, 700, 1.17);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
 }
 
 .footer-social__link {
@@ -89,7 +81,12 @@
   padding-bottom: 12px;
   padding-left: 12px;
 
-  transition: background-color 250ms var(--timing-function);
+  transition: background-color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-text-color;
+  }
 }
 
 .footer-social__item:not(:last-child) {
@@ -97,10 +94,5 @@
 }
 
 .footer-social__icon {
-  fill: var(--main-white);
-}
-
-.footer-social__link:hover,
-.footer-social__link:focus {
-  background-color: var(--accent-text-color);
+  fill: $main-white;
 }
