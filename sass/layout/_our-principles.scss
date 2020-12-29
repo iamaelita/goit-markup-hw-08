@@ -1,0 +1,35 @@
+.our-principles {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.our-principles__list {
+  display: flex;
+}
+
+.our-principle__title {
+  text-transform: uppercase;
+  min-width: 270px;
+  margin-bottom: 10px;
+}
+
+.our-principles__item {
+  display: block;
+  flex-wrap: wrap;
+}
+
+.our-principles__item:not(:last-child) {
+  padding-right: 30px;
+}
+
+.our-principles__image {
+  display: block;
+  width: 270px;
+  height: 120px;
+  background-color: var(--sub-background);
+  margin-bottom: 30px;
+  padding-left: 100px;
+  padding-top: 25px;
+  padding-right: 100px;
+  padding-bottom: 25px;
+}
