@@ -1,0 +1,29 @@
+/* цвет основного текста #757575 */
+/* вторичный цвет текста  #212121 */
+/* цвет текста акцент #2196F3 */
+
+/* цвет текста лого основной #000000 */
+/* цвет текста лого акцент #2196F3 */
+
+/* основной белый #FFFFFF  */
+/* вторичный цвет фона #F5F4FA */
+/* фон акцент #2F303A 
+цвет иконок социальных сетей #AFB1B8 */
+
+/*========ОСНОВНЫЕ=========*/
+
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-text-color: #2196f3;
+
+  --logo-black-color: #000000;
+
+  --main-white: #ffffff;
+  --sub-background: #f5f4fa;
+  --accent-background: #2f303a;
+  --social-links: #afb1b8;
+  --clients-logo-border: #afb1b8;
+
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
