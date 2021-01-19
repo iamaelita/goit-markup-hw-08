@@ -1,16 +1,21 @@
-@import "./utils/variables";
-@import "./utils/mixins";
-@import "./utils/placeholders";
-@import "./base/common";
-@import "./base/container";
-@import "./utils/visually-hidden";
-@import "./layout/header";
-@import "./layout/hero";
-@import "./components/modal-form";
-@import "./layout/our-principles";
-@import "./layout/what-we-do";
-@import "./layout/our-team";
-@import "./layout/clients";
-@import "./layout/footer";
-@import "./components/subscribe-form";
-@import "./layout/portfolio";
+@import "utils/variables";
+@import "utils/visially-hidden";
+@import "utils/container";
+@import "utils/placeholders";
+@import "utils/mixins";
+@import "base/common";
+
+@import "components/logo";
+@import "components/menu";
+@import "components/button";
+@import "components/section-title";
+@import "components/backdrop";
+@import "components/social-list";
+
+@import "layout/header";
+@import "layout/hero";
+@import "layout/features";
+@import "layout/service";
+@import "layout/team";
+@import "layout/clients";
+@import "layout/footer";
