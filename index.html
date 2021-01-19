@@ -16,20 +16,24 @@
 
     <!--ШАПКА САЙТА-->
 
-    <!-- <header class="header">
+    <header class="header">
          <div class="header container">
-             <nav class="site-nav header"> -->
-         <!-- Логотип
-                 <a class="header__logo" href="./index.html" lang="en"><span class="header__logo--accent">Web</span>Studio</a>
+                <!-- Логотип--  -->
+                <a class="header__logo" href="./index.html" lang="en"><span class="header__logo--accent">Web</span>Studio</a>
+           
+           
+                <div class="menu-container header" id="menu-container" data-menu>
+                <nav class="site-nav header">
+               
         <!--Основная навигация-->
-                 <!-- <ul class="site-nav__links header">
+                 <ul class="site-nav__links header">
                      <li class="site-nav__item"> <a class="site-nav__link site-nav__link--current" href="./index.html">Студия</a></li>
                      <li class="site-nav__item"> <a class="site-nav__link" href="./portfolio.html">Портфолио</a></li>
                      <li class="site-nav__item"> <a class="site-nav__link" href="#">Контакты</a></li>
                  </ul>
-             </nav> -->
+             </nav>
         <!--Связаться-->
-                 <!-- <address class="address">
+                 <address class="address">
                      <ul class="header-contacts header">
                          <li class="header-contacts__item"> 
                              <a class="header-contacts__address-link" href="mailto:info@devstudio.com">
@@ -45,9 +49,66 @@
                             </svg>+38 096 111 11 11</a></li>
                      </ul>
                  </address>
+                 </div>
+
+                <button type="button" class="menu-button" data-menu-button>
+                    <svg width="40" height="40" aria-label="Переключатель мобильного меню" aria-expanded="false"
+                        aria-controls="menu-container">
+                        <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+                        <use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
+                    </svg>
+                </button>
         </div>
     </header>
- -->
+
+
+<!-- 
+<header class="header">
+    <div class="container nav-wrapper">
+        <a href="./index.html" lang="en" class="logo nav-logo link"><span>Web</span>Studio</a>
+        <div class="menu-container" id="menu-container" data-menu>
+            <nav class="main-nav">
+                <ul class="site-nav list">
+                    <li class="site-nav__item">
+                        <a href="./index.html" class="site-nav__link link current">Студия</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a href="./portfolio.html" class="site-nav__link link">Портфолио</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a href="" class="site-nav__link link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <address class="nav-contacts">
+                <a class="nav-contacts__title" href="mailto:info@devstudio.com">
+                    <svg class="contacts-icon" width="16px" height="12px">
+                        <use href="./images/icons/sprite.svg#icon-envelope"></use>
+                    </svg>
+                    info@devstudio.com</a>
+
+                <a class="nav-contacts__title" href="tel:+380961111111">
+                    <svg class="contacts-icon" width="10px" height="16px">
+                        <use href="./images/icons/sprite.svg#icon-smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11</a>
+            </address>
+        </div>
+        <button type="button" class="menu-button" data-menu-button>
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню" aria-expanded="false"
+                aria-controls="menu-container">
+                <use class="icon-menu" href="./images/icons/sprite.svg#icon-menu"></use>
+                <use class="icon-cross" href="./images/icons/sprite.svg#icon-cross"></use>
+            </svg>
+        </button>
+    </div>
+</header> -->
+
+
+
+
+
 
  <main>
 
@@ -492,6 +553,8 @@
      </footer> -->
 
 <script src="./js/modal.js"></script>
+<script src="./js/menu.js"></script>
+<script src="./js/form.js"></script>
 
 </body>
 </html> 
