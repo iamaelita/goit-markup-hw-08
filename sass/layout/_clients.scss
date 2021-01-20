@@ -1,42 +1,75 @@
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-
-.clients__list {
+.clients-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top: -15px;
+  margin-bottom: -15px;
 }
 
-.clients__link {
-  @extend %flex-center;
-  width: 170px;
+.clients-list__item {
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: calc((100% - 2 * 30px) / 2);
+}
+
+.clients-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   height: 90px;
-  border: 1px solid $clients-logo-border;
+  color: var(--clients-logo);
+
+  border: 1px solid var(--clients-logo);
   border-radius: 4px;
 
-  color: $clients-logo-border;
-  cursor: pointer;
-
-  transition: border-color 250ms $timing-function;
+  transition-property: color, border;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing);
 
   &:hover,
   &:focus {
-    border-color: $accent-text-color;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
   }
 }
 
-.clients__title {
-  margin-bottom: 50px;
+.clients-list__icon {
+  fill: currentColor;
 }
 
-.clients__logo {
-  fill: $clients-logo-border;
+@media screen and (max-width: 1199px) {
+  .clients-list {
+    margin-top: -15px;
+    margin-bottom: -15px;
+  }
 
-  transition: fill 250ms $timing-function;
+  .clients-list__item {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
 
-  .clients__link:hover &,
-  .clients__link:focus & {
-    fill: $accent-text-color;
+@media screen and (min-width: 768px) {
+  .clients-list__item {
+    width: calc((100% - 3 * 30px) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .clients-list__item {
+    width: calc((100% - 6 * 30px) / 6);
   }
 }
