@@ -69,6 +69,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -150,6 +154,20 @@ a {
   padding: 0;
   border: 0;
   background-color: transparent;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--timing);
+          transition-timing-function: var(--timing);
+}
+
+.menu-button:hover, .menu-button:focus {
+  color: var(--accent-color);
+}
+
+.menu-button__icon {
+  fill: currentColor;
 }
 
 @media screen and (min-width: 768px) {
@@ -644,6 +662,36 @@ a {
           transition-timing-function: var(--timing);
 }
 
+.works-list__title {
+  margin-bottom: 4px;
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.works-list__description {
+  font-size: 16px;
+  line-height: 1.875;
+  color: var(--title-text-color);
+}
+
+.works-list__description-wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 24px;
+  padding-left: 24px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.works-list__item:hover .works-list__description-wrapper,
+.works-list__item:focus .works-list__description-wrapper {
+  border: none;
+}
+
 @media screen and (max-width: 767px) {
   .works-list__item:not(:last-child) {
     margin-bottom: 30px;
@@ -666,6 +714,12 @@ a {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .works-list__description-wrapper.card2 {
+    padding-right: 12px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .works {
     padding-top: 94px;
@@ -675,33 +729,6 @@ a {
     -ms-flex-preferred-size: calc((100% - 3 * 30px) / 3);
         flex-basis: calc((100% - 3 * 30px) / 3);
   }
-}
-
-.works-list__title {
-  margin-bottom: 4px;
-  color: var(--primary-text-color);
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-
-.works-list__description {
-  font-size: 16px;
-  line-height: 1.875;
-  color: var(--title-text-color);
-}
-
-.works-list__description-wrapper {
-  padding: 20px 24px;
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-}
-
-.works-list__item:hover .works-list__description-wrapper,
-.works-list__item:focus .works-list__description-wrapper {
-  border: none;
 }
 
 .footer {
