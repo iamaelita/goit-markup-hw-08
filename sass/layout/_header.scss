@@ -39,8 +39,7 @@
   transition: color 250ms var(--timing);
 
   &::after {
-    // @extend %navLinkAfter;
-    @include navLinkAfter;
+    @include nav-underline;
 
     transition: all 250ms var(--timing);
   }
@@ -60,8 +59,7 @@
   }
 
   &.current::after {
-    // @extend %navLinkAfter;
-    @include navLinkAfter;
+    @include nav-underline;
 
     opacity: 1;
     transform: scaleX(1);

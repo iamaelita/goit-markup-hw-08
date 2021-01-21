@@ -17,7 +17,7 @@
   transition-timing-function: var(--timing);
 }
 
-@mixin navLinkAfter {
+@mixin nav-underline {
   content: "";
   display: block;
   position: absolute;
@@ -38,7 +38,7 @@
   }
 }
 
-@mixin socialLink {
+@mixin social-link {
   display: flex;
   align-items: center;
   justify-content: center;
