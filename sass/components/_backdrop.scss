@@ -11,7 +11,7 @@
 
   transition-property: opacity, visibility;
   transition-duration: 400ms;
-  transition-timing-function: var(--timing);
+  transition-timing-function: $timing;
 }
 
 .modal {
@@ -26,14 +26,14 @@
   padding-bottom: 40px;
   padding-left: 40px;
 
-  background-color: var(--primary-white-color);
+  background-color: $primary-white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
   transition-property: transform;
   transition-duration: 250ms;
-  transition-timing-function: var(--timing);
+  transition-timing-function: $timing;
   transition-delay: 150ms;
 }
 
@@ -54,7 +54,7 @@
   width: 30px;
   height: 30px;
 
-  background-color: var(--primary-white-color);
+  background-color: $primary-white-color;
 
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -63,12 +63,12 @@
 
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: var(--timing);
+  transition-timing-function: $timing;
 }
 
 .modal-button:hover,
 .modal-button:focus {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .modal-button__icon {
@@ -86,7 +86,7 @@
 .form-title {
   margin-bottom: 12px;
 
-  color: var(--primary-text-color);
+  color: $primary-text-color;
   font-size: 20px;
   font-weight: 700;
   line-height: 1.5;
@@ -100,7 +100,7 @@
 }
 
 .label-description {
-  color: var(--title-text-color);
+  color: $title-text-color;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.171;
@@ -113,7 +113,7 @@
 
 .modal-form__input-wrapper {
   position: relative;
-  color: var(--primary-text-color);
+  color: $primary-text-color;
 }
 
 .modal-form__input {
@@ -125,12 +125,12 @@
 
   transition-property: border-color;
   transition-duration: 250ms;
-  transition-timing-function: var(--timing);
+  transition-timing-function: $timing;
 }
 
 .modal-form__input:focus {
   outline: none;
-  border-color: var(--accent-color);
+  border-color: $accent-color;
 }
 
 .form-field.textarea {
@@ -147,11 +147,11 @@
 
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: var(--timing);
+  transition-timing-function: $timing;
 }
 
 .modal-form__input:focus + .modal-form__icon {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .modal-form__comment {
@@ -164,11 +164,11 @@
 
   transition-property: border-color;
   transition-duration: 250ms;
-  transition-timing-function: var(--timing);
+  transition-timing-function: $timing;
 }
 
 .modal-form__comment::placeholder {
-  color: var(--text-color-placeholder);
+  color: $text-color-placeholder;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.171;
@@ -177,12 +177,11 @@
 
 .modal-form__comment:focus {
   outline: none;
-  border-color: var(--accent-color);
+  border-color: $accent-color;
 }
 
 .form-field.policy {
   display: flex;
-  // align-items: center;
   margin-bottom: 30px;
 }
 
@@ -206,20 +205,20 @@
   min-height: 15px;
   margin-right: 6px;
 
-  border: 2px solid var(--primary-text-color);
+  border: 2px solid $primary-text-color;
   border-radius: 2px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .modal-form__input-policy:checked + .modal-form__label-policy::before {
-  background-color: var(--accent-color);
+  background-color: $accent-color;
   background-image: url(../images/icons/icon-check-vector.svg);
   border: none;
 }
 
 .policy-link {
-  color: var(--accent-color);
+  color: $accent-color;
   text-decoration: underline;
   margin-left: 3px;
   font-weight: 400;
@@ -236,8 +235,8 @@
   margin-left: auto;
   margin-right: auto;
 
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
+  color: $primary-white-color;
+  background-color: $accent-color;
 
   font-weight: 700;
   font-size: 16px;
@@ -248,7 +247,7 @@
 
   transition-property: background-color, box-shadow;
   transition-duration: 250ms;
-  transition-timing-function: var(--timing);
+  transition-timing-function: $timing;
 }
 
 .button-submit:hover,

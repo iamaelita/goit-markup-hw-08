@@ -1,5 +1,5 @@
 .menu-container {
-  background-color: var(--primary-white-color);
+  background-color: $primary-white-color;
 
   &.is-open {
     display: block;
@@ -29,11 +29,11 @@
 
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: var(--timing);
+  transition-timing-function: $timing;
 
   &:hover,
   &:focus {
-    color: var(--accent-color);
+    color: $accent-color;
   }
 
   &__icon {

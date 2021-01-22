@@ -1,7 +1,6 @@
 @import "utils/variables";
-@import "utils/visially-hidden";
+@import "utils/visually-hidden";
 @import "utils/container";
-@import "utils/placeholders";
 @import "utils/mixins";
 @import "base/common";
 
@@ -19,3 +18,5 @@
 @import "layout/team";
 @import "layout/clients";
 @import "layout/footer";
+@import "layout/works";
+@import "layout/portfolio-button";

@@ -18,12 +18,12 @@
 
   transition-property: background-color, color;
   transition-duration: 250ms;
-  transition-timing-function: var(--timing);
+  transition-timing-function: $timing;
 
   &:hover,
   &:focus {
-    background-color: var(--accent-color);
-    color: var(--primary-white-color);
+    background-color: $accent-color;
+    color: $primary-white-color;
   }
 }
 
@@ -46,15 +46,15 @@
 
   background-color: rgba(255, 255, 255, 0.1);
 
-  color: var(--primary-white-color);
+  color: $primary-white-color;
 
   transition-property: background-color;
   transition-duration: 250ms;
-  transition-timing-function: var(--timing);
+  transition-timing-function: $timing;
 
   &:hover,
   &:focus {
-    background-color: var(--accent-color);
+    background-color: $accent-color;
   }
 }
 

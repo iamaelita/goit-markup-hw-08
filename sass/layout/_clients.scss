@@ -25,19 +25,19 @@
   justify-content: center;
 
   height: 90px;
-  color: var(--clients-logo);
+  color: $clients-logo;
 
-  border: 1px solid var(--clients-logo);
+  border: 1px solid $clients-logo;
   border-radius: 4px;
 
   transition-property: color, border;
   transition-duration: 250ms;
-  transition-timing-function: var(--timing);
+  transition-timing-function: $timing;
 
   &:hover,
   &:focus {
-    color: var(--accent-color);
-    border: 1px solid var(--accent-color);
+    color: $accent-color;
+    border: 1px solid $ccent-color;
   }
 }
 
