@@ -15,10 +15,10 @@
 }
 
 .nav-logo {
-  color: $black-color;
+  color: var(--black-color);
 
   & span {
-    color: $accent-color;
+    color: var(--accent-color);
   }
 }
 
@@ -30,23 +30,23 @@
   position: relative;
   display: inline-block;
 
-  color: $primary-text-color;
+  color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.172;
   letter-spacing: 0.02em;
 
-  transition: color 250ms $timing;
+  transition: color 250ms var(--timing);
 
   &::after {
     @include nav-underline;
 
-    transition: all 250ms $iming;
+    transition: all 250ms var(--timing);
   }
 
   &:hover,
   &:focus {
-    color: $accent-color;
+    color: var(--accent-color);
   }
 
   &:hover::after {
@@ -55,7 +55,7 @@
   }
 
   &.current {
-    color: $accent-color;
+    color: var(--accent-color);
   }
 
   &.current::after {
@@ -77,18 +77,18 @@
   display: flex;
   align-items: center;
 
-  color: $title-text-color;
+  color: var(--title-text-color);
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.171;
   letter-spacing: 0.02em;
 
-  transition: color 250ms $timing;
+  transition: color 250ms var(--timing);
 
   &:hover,
   &:focus {
-    color: $accent-color;
+    color: var(--accent-color);
   }
 }
 

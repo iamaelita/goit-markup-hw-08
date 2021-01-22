@@ -14,11 +14,13 @@
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+  
+ 
 }
 
 .hero__title {
   margin-bottom: 30px;
-  color: $primary-white-color;
+  color: var(--primary-white-color);
   font-size: 26px;
   font-weight: 900;
   line-height: 1.615;

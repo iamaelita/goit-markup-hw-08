@@ -1,11 +1,12 @@
 .button {
   display: inline-block;
   padding: 10px 32px;
-  color: $primary-text-color;
-  background-color: $second-bg-color;
+  color: var(--primary-text-color);
+  background-color: var(--second-bg-color);
 
   font-family: inherit;
   border-radius: 4px;
   border: none;
   text-align: center;
 }
+
