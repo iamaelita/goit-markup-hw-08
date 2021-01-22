@@ -81,8 +81,6 @@
   pointer-events: none;
 }
 
-/* ====== FORM ====== */
-
 .form-title {
   margin-bottom: 12px;
 
@@ -182,7 +180,6 @@
 
 .form-field.policy {
   display: flex;
-  // align-items: center;
   margin-bottom: 30px;
 }
 
@@ -293,7 +290,7 @@
     padding-bottom: 222px;
   }
 
-  .modal{
+  .modal {
     min-width: 528px;
   }
 
@@ -301,16 +298,16 @@
     line-height: 1.172;
   }
 
-  .modal-form__label-policy::before{
+  .modal-form__label-policy::before {
     margin-right: 8.38px;
   }
 
-  .policy label{
+  .policy label {
     font-size: 14px;
     line-height: 1.714;
   }
 
-  .policy-link{
+  .policy-link {
     font-size: 14px;
     line-height: 1.714;
   }
