@@ -24,7 +24,6 @@
   font-weight: 1.172;
   font-weight: 700;
   text-transform: uppercase;
-  text-align: center;
 }
 
 .features-list__descriptions {
@@ -37,6 +36,10 @@
     &:not(:last-child) {
       margin-bottom: 30px;
     }
+  }
+
+  .features-list__title {
+    text-align: center;
   }
 }
 
